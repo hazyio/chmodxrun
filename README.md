@@ -1,6 +1,6 @@
 # Chmod X Run
 
-Right-click any `.sh` file to make it executable and run it — no manual `chmod +x` or terminal typing required.
+Right-click any `.sh` ro `.bash` file to make it executable and run it — no manual `chmod +x` or terminal typing required.
 ![Demo](media/demo.gif)
 
 ## Features
@@ -19,11 +19,11 @@ Both context menu entries only appear on files with a `.sh` extension, so your E
    - You'll get a notification with **Run** and **Run Silently** buttons.
 3. Or choose **Run** / **Run Silently** directly if the file is already executable.
 
-| Command | What it does |
-|---|---|
-| `Chmod X Run: Mark as Executable` | Sets the execute permission bit on the file |
-| `Chmod X Run: Run` | Runs the script in the integrated terminal |
-| `Chmod X Run: Run Silently` | Runs the script via a background process with progress + result notifications |
+| Command                           | What it does                                                                  |
+| --------------------------------- | ----------------------------------------------------------------------------- |
+| `Chmod X Run: Mark as Executable` | Sets the execute permission bit on the file                                   |
+| `Chmod X Run: Run`                | Runs the script in the integrated terminal                                    |
+| `Chmod X Run: Run Silently`       | Runs the script via a background process with progress + result notifications |
 
 ## Requirements
 
@@ -37,12 +37,6 @@ This extension currently contributes no configurable settings.
 ## Known Issues
 
 - On native Windows without WSL/Git Bash, running `.sh` files has no meaningful shell to execute in.
-
-## Release Notes
-
-### 0.0.1
-
-Initial release — mark executable, run in terminal, run silently with progress notification.
 
 ---
 

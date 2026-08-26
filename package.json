@@ -6,6 +6,7 @@
   "engines": {
     "vscode": "^1.134.0"
   },
+  "publisher": "HazyIo",
   "keywords": [
     "shell",
     "bash",
@@ -26,6 +27,7 @@
     "url": "https://github.com/hazyio/chmodxrun"
   },
   "icon": "media/icon.png",
+  "license": "MIT",
   "activationEvents": [],
   "main": "./dist/extension.js",
   "contributes": {
