@@ -1,6 +1,6 @@
 # Chmod X Run
 
-Right-click any `.sh` ro `.bash` file to make it executable and run it — no manual `chmod +x` or terminal typing required.
+Right-click any `.sh` or `.bash` file to make it executable and run it — no manual `chmod +x` or terminal typing required.
 ![Demo](media/demo.gif)
 
 ## Features
