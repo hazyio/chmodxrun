@@ -2,7 +2,7 @@
   "name": "chmodxrun",
   "displayName": "Chmod X Run",
   "description": "Right-click any .sh or .bash file to make it executable and run it in the terminal — no more manual chmod +x.",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "engines": {
     "vscode": "^1.134.0"
   },

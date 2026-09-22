@@ -2,6 +2,7 @@ import { exec } from "child_process";
 import * as fs from "fs";
 import * as path from "path";
 import * as vscode from "vscode";
+import { runningTerminals } from "./extension";
 
 export function registerCommands(context: vscode.ExtensionContext) {
   pushCommand(context, "markExecutable", markExecutable);
@@ -19,12 +20,18 @@ function pushCommand(
   );
 }
 
-function runScript(uri: vscode.Uri) {
+export function runScript(uri: vscode.Uri) {
   const filePath = uri.fsPath;
 
-  let terminal =
-    vscode.window.terminals.find((t) => t.name === "Chmod X Run") ??
-    vscode.window.createTerminal("Chmod X Run");
+  // Find an existing idle "Chmod X Run" terminal.
+  let terminal = vscode.window.terminals.find(
+    (t) => t.name === "Chmod X Run" && !runningTerminals.has(t),
+  );
+
+  // No idle terminal -> create another one.
+  if (!terminal) {
+    terminal = vscode.window.createTerminal("Chmod X Run");
+  }
 
   terminal.show();
   terminal.sendText(`"${filePath}"`);
